@@ -1,162 +1,118 @@
-# Real-Time Process Monitoring Dashboard
-A Modern OS-Level Analytics & Process Management Tool
+# ⚡ Real-Time Process Monitoring Dashboard  
+### Advanced OS Simulation • Resource Visualization • Enterprise UI  
+**Built with React + TypeScript + TailwindCSS**
 
-This project is a professional real-time system monitoring dashboard built using Python, CustomTkinter, psutil, and Matplotlib.
-It provides live analytics of CPU, memory, disk, network usage, and full process management — all inside a beautifully designed premium UI.
+This project is a **professional-grade Real-Time System Monitoring Dashboard** designed to simulate OS-level telemetry including **CPU, memory, disk, network, processes, services, logs, alerts, hardware sensors, thermal monitoring, GPU stats**, and more.
 
-This tool was developed as part of Operating Systems (CSE316) at Lovely Professional University.
+Designed with a futuristic, enterprise-style UI inspired by **Kali Linux, macOS Activity Monitor & Cloud DevOps Dashboards**, this project demonstrates deep understanding of:
 
-# 🌐 Live Project Demo
+- Operating Systems (CSE316)
+- Process Scheduling & Management
+- System Resource Monitoring
+- Event Logging & Alert Handling
+- Performance Visualization
+- UI/UX Engineering in Web Development
+- Real-time Simulation & Telemetry Pipelines
 
-🔗 https://realtimeprocessmonitoringdashboard.netlify.app
+---
 
-🚀 Features
-🖥️ Real-Time System Monitoring
+## 📸 Screenshots
 
-Live CPU usage (per-second updates)
+### 🏠 Dashboard Overview
+<img width="1919" height="909" alt="Screenshot 2025-12-09 142413" src="https://github.com/user-attachments/assets/ff9fc350-6323-49b8-8dbd-e4823b4f092e" />
 
-Dynamic memory statistics
 
-Disk usage, read/write speed
+### ⚙️ Process Manager
+<img width="1919" height="909" alt="Screenshot 2025-12-09 142445" src="https://github.com/user-attachments/assets/e87ef74d-f934-4089-ad06-afbb0a034c3b" />
 
-Network upload & download rate
 
-System uptime & battery status
+### 🧠 AI System Analysis
+<img width="1919" height="911" alt="Screenshot 2025-12-09 170227" src="https://github.com/user-attachments/assets/76b68605-6d25-4c2f-a247-09d8f3bc1f94" />
 
-Auto-refresh with smooth animations
 
-⚙️ Advanced Process Management
+### 🌐 Network Monitoring
+<img width="1638" height="737" alt="Screenshot 2025-12-09 170350" src="https://github.com/user-attachments/assets/11b1a88d-81ee-4b84-9448-ffc221fd62ec" />
 
-View all active processes
 
-Sort by CPU, Memory, PID, Threads, Status
+---
 
-Live search bar
+## 🚀 Live Demo  
+🔗 **realtimeprocessmonitoringdashboard.netlify.app**
 
-Color-highlighted high-usage tasks
+Explore the dashboard fully in the browser — no installation required.
 
-Kill/Terminate any process
+---
 
-View detailed metadata (command, RAM, threads, user, etc.)
+## 🧩 Features
 
-📊 Performance Visualization
+### 🖥️ **System Overview**
+- Real-time CPU usage, memory usage, disk IO, network throughput  
+- Health Score calculation using multi-factor OS metrics  
+- Live telemetry stream with 40-point historical graph  
 
-Real-time CPU usage graph
+### ⚙️ **Process Manager**
+- Simulated OS processes with:
+  - CPU %, Memory %, Threads, State  
+  - Renice (priority management)  
+  - Start/Stop/Kill actions  
+- Real-time updates every 1.5 seconds  
 
-Real-time memory usage graph
+### 🌐 **Network Monitor**
+- Upload / download rates  
+- Active connection list  
+- Automatic spike simulation  
 
-Smooth, low-latency rendering
+### 💾 **Disk Analysis**
+- Storage visualization  
+- Real-time read/write speeds  
+- Directory tree simulation  
 
-Auto-optimizing update cycle (prevents lag)
+### 🔧 **System Services**
+- Start/Stop systemctl-style services  
+- Service uptime & event logging  
 
-🔔 Smart Alert Engine
+### 🔥 **Hardware Sensors**
+- CPU Temp, GPU Temp, fan speeds  
+- Voltage monitor  
+- Thermal history graph  
 
-High CPU alert
+### 🧠 **AI System Analysis**
+- Gemini-powered system health interpretation  
+- Automatic diagnostics + recommendations  
 
-Memory pressure alert
+### 🚨 **Alerts & Kernel Log Stream**
+- Real-time critical warnings  
+- System events, security logs, kernel messages  
 
-Low disk space alert
+### 🖥️ **Built-in Terminal**
+- Toggle using `~`  
+- Execute simulated commands:  
+  - `kill`  
+  - `top`  
+  - `help`  
+  - `inspect`  
+  - `logs`  
 
-Swap usage alert
+---
 
-Visual + color-coded alert cards
+## 🛠️ Tech Stack
 
-📁 Export & Reporting
+| Layer | Technology |
+|-------|------------|
+| Frontend | React + TypeScript |
+| UI | TailwindCSS, Lucide Icons |
+| Charts | Custom SVG charts |
+| Simulation Engine | Custom CPU/memory/network/disk simulation pipeline |
+| AI Engine | Gemini API |
+| Deployment | Netlify |
 
-Export full system snapshot:
+---
 
-.csv
+## 📦 Installation (Local)
 
-.json
-
-Includes: system stats + top processes + alerts.
-
-🎨 Premium UI / UX
-
-Modern dark-mode dashboard
-
-Sidebar navigation with icons
-
-Elegant cards, spacing, typography
-
-Clean layout for professional appearance
-
-🛠️ Tech Stack
-Layer	Technology
-UI Framework	CustomTkinter
-System Engine	psutil
-Graph Rendering	Matplotlib
-Language	Python 3.x
-Threading	Python’s threading module
-Deployment	Netlify (demo page)
-📦 Installation & Setup
-1️⃣ Clone the Repository
-git clone https://github.com/dheeraj9551/-Real-Time-Process-Monitoring-Dashboard.git
+```bash
+git clone https://github.com/dheeraj9551/-Real-Time-Process-Monitoring-Dashboard
 cd Real-Time-Process-Monitoring-Dashboard
 
-2️⃣ Create Virtual Environment
-python -m venv venv
-
-3️⃣ Activate (Windows PowerShell)
-.\venv\Scripts\Activate.ps1
-
-
-If you get execution policy errors:
-
-Set-ExecutionPolicy Unrestricted -Scope Process
-
-4️⃣ Install Dependencies
-pip install -r requirements.txt
-
-▶️ Run the Application
-python dashboard_polished_final.py
-
-📸 Screenshots 
-<img width="1919" height="909" alt="Screenshot 2025-12-09 142413" src="https://github.com/user-attachments/assets/906e4e21-6d0d-411e-a9b1-90740284af47" />
-<img width="1919" height="909" alt="Screenshot 2025-12-09 142445" src="https://github.com/user-attachments/assets/9cec39ba-4bb5-4da3-ab06-33c539d100c2" />
-<img width="1919" height="771" alt="Screenshot 2025-12-09 142618" src="https://github.com/user-attachments/assets/273b3212-079e-4a4c-9ba5-0855186b1099" />
-<img width="1919" height="908" alt="Screenshot 2025-12-09 142654" src="https://github.com/user-attachments/assets/b666aeac-6e04-41cd-b479-a2c76ccd7e47" />
-<img width="1919" height="796" alt="Screenshot 2025-12-09 142740" src="https://github.com/user-attachments/assets/44ee4a85-bdf7-4b2b-acef-9267ba8a0c57" />
-
-
-
-
-
-Example:
-
-![Dashboard Screenshot](images/dashboard.png)
-![Process View](images/processes.png)
-
-📂 Project Structure
-📁 OS-Project/
-│── dashboard_polished_final.py      # Main application
-│── system_logs/                     # Exported logs
-│── requirements.txt                 # Dependencies
-│── README.md                        # (this file)
-
-🎓 Academic Purpose
-
-This project demonstrates real OS concepts:
-
-CPU scheduling
-
-Process control
-
-Memory monitoring
-
-File system usage
-
-System resource visualization
-
-Real-time event handling
-
-Built for CSE316 – Operating Systems at LPU.
-
-👨‍💻 Developer
-
-Dheeraj Pothula
-B.Tech CSE — Lovely Professional University
-Passionate about OS tools, UI engineering, and real-time dashboards.
-
-📜 License
-MIT License
+npm install
+npm run dev
