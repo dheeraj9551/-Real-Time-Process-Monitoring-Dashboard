@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SysAdmin AI - Real-Time Process Monitor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+              tech: ['Share Tech Mono', 'monospace'],
+            },
+            colors: {
+              slate: {
+                850: '#1e293b',
+                900: '#0f172a',
+                950: '#020617',
+              }
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+              'pulse-glow': 'pulseGlow 2s infinite',
+              'grid-move': 'gridMove 20s linear infinite',
+              'spin-slow': 'spin 8s linear infinite',
+              'glitch': 'glitch 1s linear infinite',
+              'scanline': 'scanline 8s linear infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #020617;
+        color: #f8fafc;
+        overflow: hidden;
+      }
+      
+      /* Custom scrollbar for table */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(15, 23, 42, 0.5); 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569; 
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulseGlow {
+        0%, 100% {
+          box-shadow: 0 0 5px rgba(99, 102, 241, 0.1);
+          border-color: rgba(99, 102, 241, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+          border-color: rgba(99, 102, 241, 0.5);
+        }
+      }
+
+      @keyframes gridMove {
+        0% { background-position: 0 0; }
+        100% { background-position: 40px 40px; }
+      }
+
+      /* Glitch Effect */
+      @keyframes glitch {
+        2%, 64% { transform: translate(2px,0) skew(0deg); }
+        4%, 60% { transform: translate(-2px,0) skew(0deg); }
+        62% { transform: translate(0,0) skew(5deg); }
+      }
+
+      .glitch-text:hover {
+        animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+        color: #818cf8;
+      }
+
+      /* CRT Scanline Overlay */
+      .scanlines {
+        background: linear-gradient(
+          to bottom,
+          rgba(255,255,255,0),
+          rgba(255,255,255,0) 50%,
+          rgba(0,0,0,0.1) 50%,
+          rgba(0,0,0,0.1)
+        );
+        background-size: 100% 4px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        z-index: 50;
+        animation: scanline 0.2s linear infinite;
+        opacity: 0.6;
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 0.5s ease-out forwards;
+        opacity: 0; /* Start hidden */
+      }
+
+      .delay-100 { animation-delay: 100ms; }
+      .delay-200 { animation-delay: 200ms; }
+      .delay-300 { animation-delay: 300ms; }
+      .delay-400 { animation-delay: 400ms; }
+      .delay-500 { animation-delay: 500ms; }
+      .delay-1000 { animation-delay: 1000ms; }
+
+      .bg-grid-pattern {
+        background-size: 40px 40px;
+        background-image: 
+          linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+        mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+      }
+
+      .glass-panel {
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+      
+      .glass-panel:hover {
+        background: rgba(30, 41, 59, 0.7);
+        border-color: rgba(99, 102, 241, 0.3);
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+      }
+
+      /* Boot Screen Typography */
+      .boot-text {
+        font-family: 'Share Tech Mono', monospace;
+        text-shadow: 0 0 5px rgba(16, 185, 129, 0.5);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.32.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "clsx": "https://aistudiocdn.com/clsx@^2.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

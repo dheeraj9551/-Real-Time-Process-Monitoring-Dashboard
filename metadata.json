@@ -1,0 +1,5 @@
+{
+  "name": "SysAdmin AI: Enterprise OS Monitor",
+  "description": "An enterprise-grade real-time operating system monitoring suite. Features comprehensive process management, live network telemetry, systemd service control, disk usage analysis, and AI-powered anomaly detection. Designed as a high-fidelity simulator for advanced OS concepts.",
+  "requestFramePermissions": []
+}
