@@ -1,20 +1,57 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+Real-Time Process Monitoring Dashboard
 
-# Run and deploy your AI Studio app
+A professional system monitoring application built using Python, CustomTkinter, psutil, and Matplotlib.
+Provides real-time analytics, process management, and system performance visualization in a clean, modern UI.
 
-This contains everything you need to run your app locally.
+🚀 Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1UzhlQC8dzKQjWzCNaHJCXVgibbZBYp74
+Live CPU, Memory, Disk & Network Monitoring
 
-## Run Locally
+Real-time CPU & RAM Usage Graphs
 
-**Prerequisites:**  Node.js
+Advanced Process Manager (search, sort, details, kill)
+
+Smart System Health Score
+
+Automatic Alerts for high resource usage
+
+Export System Data (CSV / JSON)
+
+Beautiful UI using CustomTkinter
+
+🛠️ Tech Stack
+
+Python 3
+
+CustomTkinter
+
+Tkinter
+
+psutil
+
+matplotlib
+
+📦 Installation
+1️⃣ Clone the Repository
+git clone https://github.com/dheeraj9551/-Real-Time-Process-Monitoring-Dashboard.git
+cd Real-Time-Process-Monitoring-Dashboard
+
+2️⃣ Create a Virtual Environment
+python -m venv venv
+
+3️⃣ Activate Virtual Environment (Windows PowerShell)
+.\venv\Scripts\Activate.ps1
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+If blocked:
+
+Set-ExecutionPolicy Unrestricted -Scope Process
+
+
+Then activate again.
+
+4️⃣ Install Dependencies
+pip install -r requirements.txt
+
+▶️ Run the Application
+python dashboard_polished_final.py
