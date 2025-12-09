@@ -1,4 +1,4 @@
-Real-Time Process Monitoring Dashboard
+# Real-Time Process Monitoring Dashboard
 A Modern OS-Level Analytics & Process Management Tool
 
 This project is a professional real-time system monitoring dashboard built using Python, CustomTkinter, psutil, and Matplotlib.
@@ -6,7 +6,7 @@ It provides live analytics of CPU, memory, disk, network usage, and full process
 
 This tool was developed as part of Operating Systems (CSE316) at Lovely Professional University.
 
-🌐 Live Project Demo
+# 🌐 Live Project Demo
 
 🔗 https://realtimeprocessmonitoringdashboard.netlify.app
 
@@ -111,17 +111,16 @@ pip install -r requirements.txt
 ▶️ Run the Application
 python dashboard_polished_final.py
 
-📸 Screenshots (Add your images here)
+📸 Screenshots 
+<img width="1919" height="909" alt="Screenshot 2025-12-09 142413" src="https://github.com/user-attachments/assets/906e4e21-6d0d-411e-a9b1-90740284af47" />
+<img width="1919" height="909" alt="Screenshot 2025-12-09 142445" src="https://github.com/user-attachments/assets/9cec39ba-4bb5-4da3-ab06-33c539d100c2" />
+<img width="1919" height="771" alt="Screenshot 2025-12-09 142618" src="https://github.com/user-attachments/assets/273b3212-079e-4a4c-9ba5-0855186b1099" />
+<img width="1919" height="908" alt="Screenshot 2025-12-09 142654" src="https://github.com/user-attachments/assets/b666aeac-6e04-41cd-b479-a2c76ccd7e47" />
+<img width="1919" height="796" alt="Screenshot 2025-12-09 142740" src="https://github.com/user-attachments/assets/44ee4a85-bdf7-4b2b-acef-9267ba8a0c57" />
 
-You can add:
 
-Dashboard view
 
-CPU & Memory graphs
 
-Process manager
-
-Alerts panel
 
 Example:
 
