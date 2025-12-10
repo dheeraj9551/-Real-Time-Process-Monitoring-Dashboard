@@ -37,7 +37,7 @@ Designed with a futuristic, enterprise-style UI inspired by **Kali Linux, macOS 
 ---
 
 ## 🚀 Live Demo  
-🔗 **realtimeprocessmonitoringdashboard.netlify.app**
+🔗 **https://realtimeprocessmonitoringdashboard.netlify.app/**
 
 Explore the dashboard fully in the browser — no installation required.
 
